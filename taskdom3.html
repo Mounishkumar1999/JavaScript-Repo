@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic signal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .container{
+                background-color: aqua;
+                width: 500px;
+                height: 400px;
+                margin-top: 100px;
+                border: 2px solid black;
+            }
+            .buto1{
+                margin-top: 100px;
+                margin-left: 80px;
+            }
+            .btn{
+                border: 2px solid rgb(1, 1, 58);
+                color: white;
+                padding: 10px;
+                width: 100px;
+                background-color:rgb(1, 1, 58) ;
+                border-radius: 25px;
+            }
+            .r,.y,.g{
+                width: 50px;
+                height: 50px;
+                background-color: lightslategray;
+                margin: auto;
+                
+            }
+            .lightbox{
+                margin-top:80px ;
+                width: 80px;
+                background-color:rgb(1, 1, 58) ;
+                padding: 10px;
+                border-radius: 25px;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="fs-1 fw-bolder text-center">Traffic Light</h1>
+        <div class="row">
+            <div class="col-4  buto1">
+                <button type="button" class="btn" id="btn1" onclick="end()">Stop</button><br><br>
+                <button type="button" class="btn" id="btn2" onclick="cen()">Ready</button><br><br>
+                <button type="button" class="btn" id="btn3" onclick="start()">Go</button><br><br>
+            </div>
+            <div class="col-6">
+                <div class="lightbox">
+                    <div class="r rounded-circle" id="re"></div><br>
+                    <div class="y rounded-circle" id="yl"></div><br>
+                    <div class="g rounded-circle" id="gr"></div><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function end(){
+            var a=document.getElementById("re")
+            a.style.backgroundColor="red"
+            var b=document.getElementById("btn1")
+            b.style.backgroundColor="red"
+            var c=document.getElementById("yl")
+            c.style.backgroundColor=""
+            var d=document.getElementById("btn2")
+            d.style.backgroundColor=""
+            var e=document.getElementById("gr")
+            e.style.backgroundColor=""
+            var f=document.getElementById("btn3")
+            f.style.backgroundColor=""
+            
+        }
+        function cen(){
+            var a=document.getElementById("re")
+            a.style.backgroundColor=""
+            var b=document.getElementById("btn1")
+            b.style.backgroundColor=""
+            var c=document.getElementById("yl")
+            c.style.backgroundColor="yellow"
+            var d=document.getElementById("btn2")
+            d.style.backgroundColor="yellow"
+            var e=document.getElementById("gr")
+            e.style.backgroundColor=""
+            var f=document.getElementById("btn3")
+            f.style.backgroundColor=""
+        }
+        function start(){
+            var a=document.getElementById("re")
+            a.style.backgroundColor=""
+            var b=document.getElementById("btn1")
+            b.style.backgroundColor=""
+            var c=document.getElementById("yl")
+            c.style.backgroundColor=""
+            var d=document.getElementById("btn2")
+            d.style.backgroundColor=""
+            var e=document.getElementById("gr")
+            e.style.backgroundColor="green"
+            var f=document.getElementById("btn3")
+            f.style.backgroundColor="green"
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
