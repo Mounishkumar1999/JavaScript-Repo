@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reg ex task1</title>
+</head>
+<body>
+    <form>
+        <label for="">password</label>
+        <input type="password" id="in1" placeholder="eg:123names@"><br><br>
+     
+        
+
+        <input type="button" onclick="fun1()" value="signin">
+
+    </form>
+    <script>
+       
+function fun1(){
+    let a=document.getElementById("in1").value
+    let pass=/^[\d]{3}[\w]*[\W]?$/g
+   if(pass.test(a)==true){
+        alert("password is valid")
+    }
+    else{
+        alert("password not valid")
+    }
+}
+</script>
+</body>
+</html>

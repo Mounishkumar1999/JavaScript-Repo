@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inputDate">Enter a date: </label>
+    <input type="date" id="inputDate">
+    <br>
+    <label for="plusFiveDays">Date +5 Days: </label>
+    <input type="text" id="plusFiveDays">
+    <br>
+    <label for="minusFiveDays">Date -5 Days: </label>
+    <input type="text" id="minusFiveDays">
+    <br>
+    <button onclick="calculateDates()">Calculate Dates</button>
+
+    <script>
+        function calculateDates() {
+
+            const inputDate = new Date(document.getElementById("inputDate").value);
+
+            if (isNaN(inputDate)) {
+                alert("Please enter a valid date.");
+                return;
+            }
+
+
+            let plusFiveDays = new Date(inputDate);
+            plusFiveDays.setDate(plusFiveDays.getDate() + 5);
+
+            let minusFiveDays = new Date(inputDate);
+            minusFiveDays.setDate(minusFiveDays.getDate() - 5);
+
+
+            document.getElementById("plusFiveDays").value = plusFiveDays
+            document.getElementById("minusFiveDays").value = minusFiveDays
+        }
+
+    </script>
+</body>
+</html>

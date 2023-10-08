@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date task</title>
+</head>
+<body>
+    <script>
+        let a= new Date()
+        console.log(a)
+        console.log(a.getDate(""))
+        console.log(a.getFullYear())
+        console.log(a.getMonth()+1)
+
+        let arr=["jan","feb","march","apr","may","jun","jul","aug","sep","oct","nov","dec"]
+        let m= a.getMonth()
+        console.log(arr[m])
+        console.log(a.toLocaleString('default',{month:'long',weekday:'long'}))
+        
+    </script>
+</body>
+</html>

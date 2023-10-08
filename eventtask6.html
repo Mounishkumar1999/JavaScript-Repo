@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventtask6</title>
+</head>
+<body>
+    <input type="text" id="enterind">
+    <button onclick="submitthevalue()">click</button>
+    <select id="getvalue"></select>
+    <script>
+        function submitthevalue(){
+           var a=Number(document.getElementById("enterind").value);
+           if(a<0 || a>0){
+            for(i=1;i<=a;i++){   
+                    var b=(document.getElementById("getvalue").innerHTML+="<option>" + i + "</option>"); 
+            }
+        }
+        else{
+            alert("not an integer")
+        }
+        }
+    </script>
+</body>
+</html>

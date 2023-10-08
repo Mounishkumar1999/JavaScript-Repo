@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Maths operation</h1>
+        <input type="number" id="num" placeholder="enter value"><br><br>
+        <input type="number" name="" id="num1" placeholder="enter value ">
+        
+        <br><br>
+        <button id="buto" onclick="valid()" >Ans</button>
+        <h1>Mathematical operation Ans :</h1>
+    <div id="main"></div>
+    <div id="two"></div>
+    <div id="thr"></div>
+    <div id="fr"></div>
+    <div id="fi"></div>
+        <script>
+            function valid(){
+                var a=parseInt(document.getElementById("num").value)
+                var b=parseInt(document.getElementById("num1").value)
+                document.getElementById("main").innerHTML=a+b;
+                var a=parseInt(document.getElementById("num").value)
+                var b=parseInt(document.getElementById("num1").value)
+                document.getElementById("two").innerHTML=a-b;
+                var a=parseInt(document.getElementById("num").value)
+                var b=parseInt(document.getElementById("num1").value)
+                document.getElementById("thr").innerHTML=a*b;
+                var a=parseInt(document.getElementById("num").value)
+                var b=parseInt(document.getElementById("num1").value)
+                document.getElementById("fr").innerHTML=a/b;
+                var a=parseInt(document.getElementById("num").value)
+                var b=parseInt(document.getElementById("num1").value)
+                document.getElementById("fi").innerHTML=a%b;
+            }
+          
+        </script>
+    </div>
+</body>
+</html>

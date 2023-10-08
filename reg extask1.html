@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reg ex task1</title>
+</head>
+<body>
+    <form>
+        <label for="">username</label>
+        <input type="text" id="in1"><br><br>
+     
+        
+
+        <input type="button" onclick="fun1()" value="signin">
+
+    </form>
+    <script>
+       
+function fun1(){
+    let a=document.getElementById("in1").value
+   let username=/^[\w]*[\s]?[\w]*$/g
+   if(username.test(a)==true){
+        alert("username is valid")
+    }
+    else{
+        alert("username not valid")
+    }
+}
+</script>
+</body>
+</html>

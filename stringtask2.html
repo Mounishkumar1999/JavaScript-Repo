@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mail(user_email){
+           var split = user_email.split("@");
+           var split1 = split[0];
+           var avg = split1.length / 2;
+           split1 = split1.substring(0, (split1.length - avg));
+           split2 = split[1];
+           return split1 + "...@" + split2;
+        };
+        document.write(mail("robin_singh@example.com"));
+     </script>
+</body>
+</html>

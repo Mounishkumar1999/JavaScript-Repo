@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callbackfunction1</title>
+</head>
+
+<body>
+    <script>
+        function isOdd(number) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(number % 2 !== 0);
+                }, 1000);
+            });
+        }
+        isOdd(4)
+            .then((result) => {
+                console.log(`4 is odd: ${result}`);
+            });
+
+        isOdd(5)
+            .then((result) => {
+                console.log(`5 is odd: ${result}`);
+            });
+    </script>
+</body>
+
+</html>

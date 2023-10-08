@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsontask1</title>
+</head>
+
+<body>
+    <form>
+        <label>Enter First Name : </label>
+        <input type="text" id="Getfirstname"><br><br>
+        <label>Enter Last Name : </label>
+        <input type="text" id="Getlastname"><br><br>
+        <label>Enter Date of Birth : </label>
+        <input type="date" id="Getdob"><br><br>
+        <label>Email : </label>
+        <input type="email" id="Getemail"><br><br>
+        <label>Password : </label>
+        <input type="password" id="Getpassword"><br><br>
+        <input type="button" onclick="gohere()" value="submit">
+    </form>
+    <script>
+        gohere = () => {
+            let name = document.getElementById("Getfirstname").value
+            let initial = document.getElementById("Getlastname").value
+            let dateofbirth = document.getElementById("Getdob").value
+            let email = document.getElementById("Getemail").value
+            let password = document.getElementById("Getpassword").value
+
+            let information = [{
+                "First Name": name,
+                "Last Name": initial,
+                "Date of Birth": dateofbirth,
+                "Email": email,
+                "Password": password
+            }]
+
+            console.log(information[0])
+            let calci = JSON.stringify(information[0])
+            console.log(calci)
+
+            localStorage.setItem("id1", calci)
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventtask8</title>
+</head>
+<body>
+    <input type="text" id="enterind" onkeyup="submitthevalue()">
+   
+    <select id="getvalue"></select>
+    <button onkeyup="submitthesecvalue()">click</button>
+    <select name="" id="getvalue2"></select>
+    <script>
+        function submitthevalue(){
+           var a=Number(document.getElementById("enterind").value);
+           
+            for(i=1;i<=a;i++){   
+                    var b=(document.getElementById("getvalue").innerHTML+="<option>" + i + "</option>"); 
+            }
+        
+        }
+        function submitthesecvalue(){
+           var a=Number(document.getElementById("getvalue").value);
+           
+            for(i=1;i<=a;i++){   
+                    var b=(document.getElementById("getvalue2").innerHTML+="<option>" + i + "</option>"); 
+            }
+        
+        }
+    </script>
+</body>
+</html>

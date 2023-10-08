@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Details</title>
+</head>
+
+<body>
+    <div id="movie-details-container">
+
+    </div>
+    <script>
+        const movieDetails = {
+            title: 'JAILER',
+            casting: ['Rajikanth', 'Thamana'],
+            directors: ['Nelson'],
+            music: 'Aniruth',
+            posterImage: 'https://mir-s3-cdn-cf.behance.net/projects/404/6816fe169930323.Y3JvcCwxNTAwLDExNzMsMCwz.jpg'
+        };
+
+        const container = document.getElementById('movie-details-container');
+
+
+        const titleElement = document.createElement('h1');
+        titleElement.textContent = movieDetails.title;
+
+        const castingElement = document.createElement('p');
+        castingElement.textContent = `Casting: ${movieDetails.casting.join(', ')}`;
+
+        const directorsElement = document.createElement('p');
+        directorsElement.textContent = `Directors: ${movieDetails.directors.join(', ')}`;
+
+        const musicElement = document.createElement('p');
+        musicElement.textContent = `Music: ${movieDetails.music}`;
+
+        const posterImageElement = document.createElement('img');
+        posterImageElement.src = movieDetails.posterImage;
+        posterImageElement.alt = movieDetails.title;
+
+
+        container.appendChild(titleElement);
+        container.appendChild(castingElement);
+        container.appendChild(directorsElement);
+        container.appendChild(musicElement);
+        container.appendChild(posterImageElement);
+
+
+    </script>
+</body>
+
+</html>

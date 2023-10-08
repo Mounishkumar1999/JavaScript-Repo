@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>password creation</title>
+    
+</head>
+<body>
+    <label>Pawssword</label>
+    <input type="password" id="pa">
+    <script>
+        var name = window.prompt('Enter your name');
+        var dob = window.prompt('Enter your DOB:');
+        var pw = name.slice(0,4)+dob;
+        document.getElementById('pa').value=pw;
+    </script>
+</body>
+</html>

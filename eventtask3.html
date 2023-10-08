@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Task3</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compare to two Values</h1><br><br>
+    <input type="number" id="box" placeholder="enter first number"><br><br>
+    <input type="number" id="box1" placeholder="enter second number"><br><br>
+    <button type="button" id="buto" onclick="valid()" >Compare</button>
+    <script>
+        function valid(){
+            var a=document.getElementById("box").value
+            var b=document.getElementById("box1").value
+            if(a===b){
+                alert("Data's are equal")
+            }
+            else{
+                alert("Data not equal")
+            }
+        }
+     
+    </script>
+</body>
+</html>
